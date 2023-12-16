@@ -1,8 +1,6 @@
 class CreateQuestions < ActiveRecord::Migration[7.1]
   def change
     create_table :questions do |t|
-      t.string :ques_type
-      t.integer :ques_id
       t.text :question_text
       t.integer :option_type, default: 0, limit: 1
       t.references :user, foreign_key: true
