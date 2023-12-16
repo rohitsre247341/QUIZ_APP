@@ -1,2 +1,0 @@
-class UsersQuizTbl < ApplicationRecord
-end

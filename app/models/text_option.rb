@@ -1,0 +1,2 @@
+class TextOption < ApplicationRecord
+end

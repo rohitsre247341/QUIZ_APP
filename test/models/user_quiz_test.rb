@@ -1,6 +1,6 @@
 require "test_helper"
 
-class LeaderboardTest < ActiveSupport::TestCase
+class UserQuizTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
