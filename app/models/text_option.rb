@@ -1,4 +1,4 @@
 class TextOption < ApplicationRecord
     belongs_to :question
-    include Ques
+    include QuestionOptionable
 end

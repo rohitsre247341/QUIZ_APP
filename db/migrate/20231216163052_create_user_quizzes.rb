@@ -6,7 +6,7 @@ class CreateUserQuizzes < ActiveRecord::Migration[7.1]
       t.references :user, foreign_key: true
       t.references :quiz, foreign_key: true
       t.integer :attempt, default: 1
-      t.integer :score
+      t.float :score
 
       t.timestamps
     end

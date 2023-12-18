@@ -6,8 +6,8 @@ class CreateUsers < ActiveRecord::Migration[7.1]
       t.string :last_name
       t.string :password
       t.integer :user_type, default: 0, limit:1
-      t.datetime :last_log
-      t.datetime :last_log_in
+      t.datetime :last_login
+      t.string :last_login_ip
 
       t.timestamps
     end

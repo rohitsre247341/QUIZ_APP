@@ -1,3 +1,3 @@
 class QuestionOption < ApplicationRecord
-    delegated_type :ques, type: %w[TextOption ImageOption], dependent: :destroy
+    delegated_type :question_optionable, type: %w[TextOption ImageOption], dependent: :destroy
 end
