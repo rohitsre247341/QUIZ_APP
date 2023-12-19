@@ -1,0 +1,44 @@
+1. Users Table =>
+		a.  add not null constraint on first name, and last name, full_name, email, password
+		b.  add ActiveRecord callback to insert full name by combining first name and last name using appropriate callbacks
+		c.  add confirm validations for password field. Update schema if needed
+		d.  apply proper conditions on the associations define on User model. As mentioned in the schema
+		e.  If we delete admin user then dependent quizzes and questions should not delete
+		f.  If we delete normal user then dependent user_quizzes and leader_boards should destroy
+2.  Categories Table
+		a.  apply unique index and not null constraint on category name
+		b.  If we delete category then destroy all related quizzes and questions
+3.  Questions Table
+		a.  add categories reference in questions table
+		b.  add difficulty level to questions table
+		c.  add custom foreign key name for user table
+		d.  remove text_options and image_options associations (wrong associations)
+		e.  define has_and_belongs_to_many relationship for quiz table
+		f.  remove associations for user_quiz and user_answers (wrong associations)
+		g.  apply has_and_belongs_to_many relationship for quizzes
+4.  QuestionOptions Table
+		a.  add reference to question table
+		b.  define association for question
+5.  ImageOptions Table
+		a. remove reference to question table
+6.  TextOptions Table
+		a.  remove reference to question table
+7.  Quiz Table
+		a.  Not null constraint on title column
+		b.  add column quiz_type (enumeration) [Mock, Practice, General, Competition]
+		c.  define scope for admin association
+		d.  has_many association for leader_boards
+		e.  build has_many through relations for getting users from user_quizzes
+		f.  build has_many through relations for getting users from leader_boards
+		g.  has_and_belongs_to_many association for questions
+8.  QuizQuestions
+		a.  create a join_table
+9.  UserQuizzes
+		a.  apply not null constraint on score column
+		b.  define scope for user association
+		c.  define has_many through relationship for questions using quiz table
+10. UserAnswers
+		a.  define association for selected_options
+11. Leaderboards
+		a.  apply not null constraint on score column
+12. Destroy leaderboards migration as it holds references to the tables which are gonna create after leaderbords table
