@@ -4,5 +4,5 @@ class Question < ApplicationRecord
     has_many :image_options
     has_many :quize_questions
     belongs_to :user_quiz
-    has_many :user_answers
+    has_one :user_answer
 end
