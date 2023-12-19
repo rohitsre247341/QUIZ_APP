@@ -5,4 +5,6 @@ class Question < ApplicationRecord
     has_many :quize_questions
     belongs_to :user_quiz
     has_one :user_answer
+    has_many :quizzes, through: :quiz_question
+    has_many :quiz_questions
 end
