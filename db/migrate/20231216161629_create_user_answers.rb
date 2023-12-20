@@ -9,3 +9,4 @@ class CreateUserAnswers < ActiveRecord::Migration[7.1]
     end
   end
 end
+# quize table should be 7th

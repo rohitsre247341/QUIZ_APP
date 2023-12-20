@@ -4,6 +4,7 @@ class CreateQuestionOptions < ActiveRecord::Migration[7.1]
       t.integer :option
       t.string :question_optionable_type
       t.bigint :question_optionable_id
+      t.references :question, foreign_key: true
       t.timestamps
     end
     add_index :question_options, [:question_optionable_id, :question_optionable_type]
