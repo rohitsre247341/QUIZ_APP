@@ -3,10 +3,8 @@ class CreateUserAnswers < ActiveRecord::Migration[7.1]
     create_table :user_answers do |t|
       t.references :user_quiz, foreign_key: true
       t.references :question, foreign_key: true
-      t.references :selected_options, foreign_key: true
-
+      t.references :selected_options, foreign_key: { to_table: :question_options }
       t.timestamps
     end
   end
 end
-# quize table should be 7th

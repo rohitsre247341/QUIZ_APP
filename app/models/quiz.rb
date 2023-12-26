@@ -8,4 +8,6 @@ class Quiz < ApplicationRecord
     has_many :users, through: :user_quizzes
     enum quiz_type: { Mock: 0, Practice: 1, General: 2, Competition: 3 }
     enum difficulty_level: { Low: 0, Medium: 1, High: 2}
+    validates :title, presence: true
+    validates :cut_off, presence: true
 end

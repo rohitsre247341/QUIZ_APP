@@ -4,4 +4,5 @@ class UserQuiz < ApplicationRecord
     has_many :user_answers
     has_many :questions
     validates :score, presence: true
+    validates :total, presence: true
 end
